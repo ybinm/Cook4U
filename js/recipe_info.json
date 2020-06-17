@@ -1,0 +1,38 @@
+[
+ {
+    "picture": "images/ShrimpPotatoPancake.jpg",
+    "name": "ShrimpPotatoPancake",
+    "main-ingredient": ["shrimp", "potato", "oil"],
+    "ingredient": ["leek", "salt"],
+    "tool": ["stove"],
+    "time": 20,
+    "difficulty": 2
+  },
+  {
+    "picture": "images/ShrimpPotatoBall.jpg",
+    "name": "ShrimpPotatoBall",
+    "main-ingredient": ["shrimp", "potato", "Flour", "oil"],
+    "ingredient": ["cheese", "salt"],
+    "tool": ["stove"],
+    "time": 40,
+    "difficulty": 4
+  },
+  {
+    "picture": "images/PotatoShrimpPizza.jpg",
+    "name": "PotatoShrimpPizza",
+    "main-ingredient": ["shrimp", "potato", "Flour", "cheese", "tomato"],
+    "ingredient": ["olive"],
+    "tool": ["oven"],
+    "time": 60,
+    "difficulty": 3
+  },
+  {
+    "picture": "images/main1.png",
+    "name": "PollackRoePasta",
+    "main-ingredient": ["pollack_roe", "noodle", "garlik", "oil"],
+    "ingredient": ["shrimp"],
+    "tool": ["stove"],
+    "time": 20,
+    "difficulty": 1 
+  }
+]

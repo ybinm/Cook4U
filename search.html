@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COOK4U</title>
+    <link rel="shortcut icon" type="image⁄x-icon" href="images/icon.png">
+    <link rel="stylesheet"  type="text/css" href="css/stylesheet.css">
+  </head>
+
+  <body>
+    <div class="left">
+      &nbsp;
+    </div>
+
+    <div class="center">
+      <p align="center"><a href="index.html"><img src="images/logo.png" onmouseover='this.src="images/logo_highlight.png"' onmouseout='this.src="images/logo.png"' width="15%"></a></p>
+      <br>
+      <div class="filter-box">
+        <div class="col">
+          <h2>Ingredients</h2>
+          <h2>Cooking Tools</h2>
+          <h2>Cooking Time</h2>
+          <h2>Cooking Difficulty</h2>
+        </div>
+        <div class="col">
+          <input type='text' class='ingredients' placeholder="Put your ingredients with ','"/>
+          <ul class="tools">
+            <li><input type="checkbox" id="tool1"><label for="tool1">Air Fryer</label></li>
+            <li><input type="checkbox" id="tool2"><label for="tool2">Oven</label></li>
+            <li><input type="checkbox" id="tool3"><label for="tool3">Stove</label></li>
+            <li><input type="checkbox" id="tool4"><label for="tool4">Steamer</label></li>
+            <li><input type="checkbox" id="tool5"><label for="tool5">Blender</label></li>
+            <li><input type="checkbox" id="tool6"><label for="tool6">Hand Mixer</label></li>
+          </ul>
+          <ol class="progress-bar">
+            <li id=1><span>0</span></li>
+            <li id=2 onClick='time(id);'><span>20</span></li>
+            <li id=3 onClick='time(id);'><span>40</span></li>
+            <li id=4 onClick='time(id);'><span>60</span></li>
+            <li id=5 onClick='time(id);'><span>no limit</span></li>
+          </ol>
+          <ol class="progress-bar">
+            <li id=6 onClick='star(id)'><span>★</span></li>
+            <li id=7 onClick='star(id);'><span>★</span></li>
+            <li id=8 onClick='star(id);'><span>★</span></li>
+            <li id=9 onClick='star(id);'><span>★</span></li>
+            <li id=10 onClick='star(id);'><span>★ &nbsp&nbsp</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <p align="right"><a href="logIn.html">&nbsp; Log in &nbsp;</a>·<a href="signUp.html">&nbsp; Sign up &nbsp;</a>&nbsp;</p>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
