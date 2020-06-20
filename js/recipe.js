@@ -1,3 +1,7 @@
+$(window).load(function() {
+    $(".loading").fadeOut();
+});
+
 var recipe_info = {
     "ShrimpPotatoPancake": {
         "name": "Shrimp Potato Pancake",
@@ -41,6 +45,10 @@ function setValue(txt1, txt2) {
     window.location.href = "search.html?" + txt1 + "&" + txt2;
 }
 
+function setName(name) {
+    window.location.href = "recipe.html?" + name;
+}
+
 (function () {
     var parameters = (location.href.slice(location.href.indexOf('?') + 1)).split('&');
 
@@ -49,4 +57,10 @@ function setValue(txt1, txt2) {
             document.getElementById('txt').value = parameters[i];
         }
     }
+})()
+
+(function () {
+    var parameters = location.href.slice(location.href.indexOf('?') + 1);
+
+    document.getElementById('recipeName').value = parameters;
 })()
