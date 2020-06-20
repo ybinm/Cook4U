@@ -6,7 +6,7 @@ var recipe_info = [
         ingredient: ["leek", "salt"],
         tool: ["stove"],
         time: 20,
-        difficulty: 2
+        difficulty: "★★"
     },
     {
         name: "Shrimp Potato Ball",
@@ -15,16 +15,16 @@ var recipe_info = [
         ingredient: ["cheese", "salt"],
         tool: ["stove"],
         time: 40,
-        difficulty: 4
+        difficulty: "★★★★"
     },
     {
-      name: "Potato Shrimp Pizza",
-      pic: ["images/psp0.jpg", "images/psp1.jpg", "images/psp2.jpg", "images/psp3.jpg"],
-      main_ingredient: ["shrimp", "potato", "Flour", "cheese", "tomato"],
-      ingredient: ["olive"],
-      tool: ["oven"],
-      time: 60,
-      difficulty: 3
+        name: "Potato Shrimp Pizza",
+        pic: ["images/psp0.jpg", "images/psp1.jpg", "images/psp2.jpg", "images/psp3.jpg"],
+        main_ingredient: ["shrimp", "potato", "Flour", "cheese", "tomato"],
+        ingredient: ["olive"],
+        tool: ["oven"],
+        time: 60,
+        difficulty: "★★★"
     },
     {
         name: "Basil Pesto Tomato Pasta",
@@ -33,7 +33,7 @@ var recipe_info = [
         ingredient: ["onion", "parsley"],
         tool: ["stove"],
         time: 20,
-        difficulty: 2 
+        difficulty: "★★" 
     }
 ]
 
@@ -46,5 +46,24 @@ function setName(name) {
     var num = parameters[1];
     num = parseInt(num);
 
-    document.getElementById('recipeImage').src = recipe_info[num].pic[0];
+    document.getElementById('recipeName').value = recipe_info[num].name;
+
+    for(var i=0; i<recipe_info[num].main_ingredient.length; i++) {
+        document.getElementById('recipeMIngred').value += recipe_info[num].main_ingredient[i] + "  ";
+    }
+
+    for(var i=0; i<recipe_info[num].ingredient.length; i++) {
+        document.getElementById('recipeIngred').value += recipe_info[num].ingredient[i] + "  ";
+    }
+
+    for(var i=0; i<recipe_info[num].tool.length; i++) {
+        document.getElementById('recipeTool').value += recipe_info[num].tool[i] + "  ";
+    }
+
+    document.getElementById('recipeTime').value = recipe_info[num].time;
+    document.getElementById('recipeDiff').value = recipe_info[num].difficulty;
+
+    for(var i=0; i<4; i++) {
+        document.getElementById('recipeImage'+i).src = recipe_info[num].pic[i];
+    }
 })()
