@@ -14,22 +14,22 @@
     <div class="center">
       <p align="center"><a href="index.html"><img src="images/logo.png" onmouseover='this.src="images/logo_highlight.png"' onmouseout='this.src="images/logo.png"' width="15%"></a></p>
       <br>
-      <div class="search-box">
+      <div class="search_box">
         <div class="col">
           <h1>Recipe Name</h1>
           <h1>Ingredients</h1>
         </div>
         <div class="col">
-          <input type="text" id="text1" class="search-bar" placeholder="Do you know the name of the recipe?"/>
-          <input type="text" id="text1" class="search-bar" placeholder="Or put your ingredients with ','"/>
+          <input type="text" id='txt1' class="search-bar" placeholder="Do you know the NAME of the recipe?"/>
+          <input type="text" id='txt2' class="search-bar" placeholder="Or put your INGREDIENTS WITH ',' WITHOUT SPACE"/>
         </div>
         <div class="col">
-          <input type="button" class="search" value="search" onClick="location.href='search.html'">
+          <input type="button" class="search" value="search" onClick="setValue(document.getElementById('txt1').value, document.getElementById('txt2').value)"/>
         </div>
       </div>
       <br>
       <div class="photo">
-        <a href="recipe.html"><img src="images/main1.png" onmouseover='this.src="images/main1_highlight.png"' onmouseout='this.src="images/main1.png"' width="26%"></a> &nbsp; &nbsp; &nbsp;
+        <a href="recipe.html"><img name="BasilPestoTomatoPasta" src="images/main1.png" onmouseover='this.src="images/main1_highlight.png"' onmouseout='this.src="images/main1.png"' onClick="reply_click(this.name)" width="26%"></a> &nbsp; &nbsp; &nbsp;
         <a href="recipe.html"><img src="images/main2.png" onmouseover='this.src="images/main2_highlight.png"' onmouseout='this.src="images/main2.png"' width="26%"></a> &nbsp; &nbsp; &nbsp;
         <a href="recipe.html"><img src="images/main3.png" onmouseover='this.src="images/main3_highlight.png"' onmouseout='this.src="images/main3.png"' width="26%"></a>
         <br> &nbsp;
@@ -43,6 +43,7 @@
       <p align="right"><a href="logIn.html">&nbsp; Log in &nbsp;</a>·<a href="signUp.html">&nbsp; Sign up &nbsp;</a>&nbsp;</p>
     </div>
 
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/recipe.js"></script>
   </body>
 </html>
