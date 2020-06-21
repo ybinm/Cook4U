@@ -16,16 +16,18 @@ var recipe_info = [
         ingredient: ["cheese", "salt"],
         tool: ["stove"],
         time: 40,
-        difficulty: "★★★★"
+        difficulty: "★★★★",
+        description: ["Grind potato and Shrimp and make the dough in ball shape, and put the cheese in the middle of the ball", "Cover each balls with raw egg", "Cover the balls with bread powder", "Put all the balls one at a time and fry them until they gets brown"]
     },
     {
         name: "Potato Shrimp Pizza",
         pic: ["images/psp0.jpg", "images/psp1.jpg", "images/psp2.jpg", "images/psp3.jpg", "images/psp4.jpg"],
         main_ingredient: ["shrimp", "potato", "flour", "cheese", "tomato"],
         ingredient: ["olive"],
-        tool: ["oven"],
+        tool: ["oven", "stove"],
         time: 60,
-        difficulty: "★★★"
+        difficulty: "★★★★",
+        description: ["Fry sliced potatoes in size you want for 1-2 minutes", "Fry Shrimps after they are all dried until its tail gets red", "Fry other ingredients you want with tomato sauce", "Lay up all the ingredients on the bread and put in the oven for 15 minutes and 180 Celsius"]
     },
     {
         name: "Basil Pesto Tomato Pasta",
@@ -95,7 +97,7 @@ function setName(name) {
     }
 
     var ranNum;
-    ranNum = Math.floor(Math.random()*(num+1));
+    ranNum = Math.floor(Math.random()*(num+5));
 
     document.getElementById('num').innerHTML = "Recommend ♥" + ranNum;
 })()

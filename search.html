@@ -4,9 +4,18 @@
     <title>COOK4U</title>
     <link rel="shortcut icon" type="image⁄x-icon" href="images/icon.png">
     <link rel="stylesheet"  type="text/css" href="css/stylesheet.css">
+    <script>
+      function setName(name) {
+        window.location.href = "recipe.html?" + name;
+      }
+    </script>
   </head>
 
   <body>
+    <div class="loading">
+      <h0>.*･｡°⋆ Loading .*･｡°⋆</h0>
+    </div>
+
     <div class="left">
       &nbsp;
     </div>
@@ -48,8 +57,62 @@
           </ol>
         </div>
       </div>
-      <div>
-        <input type='text' id='nameSearchName' class="recipe-detail" style="margin: 31px 20px 0px;" readonly/>
+      <div class ="recipe-list" onClick="setName('&0')">
+        <input type='text' id='recipeName1' class='recipe-bar' style="margin-top: -5px; cursor: pointer;" value="" readonly/>
+        <div class="list-photo">
+          <img id='recipeImage1' style="position: relative; top: 10%; left: -25%;" width="150%">
+        </div>
+        <div style="width: 20%; float: left;">
+          <h5>Ingredients</h5>
+          <h5>Cooking Tools</h5>
+          <h5>Cooking Time</h5>
+          <h5>Cooking Difficulty</h5>
+        </div>
+        <div style="width: 40%; float: left;">
+          <input type='text' id='recipeMIngred1' class="recipe-detail" style="margin: 24px 20px 0px; cursor: pointer;" readonly/>
+          <input type='text' id='recipeIngred1' class="recipe-detail" style="margin: -5px 20px 0px; color: var(--color-gray); cursor: pointer;" readonly/>
+          <input type='text' id='recipeTool1' class="recipe-detail" style="margin: 17px 20px; cursor: pointer;" readonly/>
+          <input type='text' id='recipeTime1' class="recipe-detail" style="margin: 22px 20px; cursor: pointer;" readonly/>
+          <input type='text' id='recipeDiff1' class="recipe-detail" style="margin: 15px 20px; cursor: pointer;" readonly/>
+        </div>
+      </div>
+      <div class ="recipe-list" onClick="setName('&1')">
+        <input type='text' id='recipeName2' class='recipe-bar' style="margin-top: -5px; cursor: pointer;" value="" readonly/>
+        <div class="list-photo">
+          <img id='recipeImage2' style="position: relative; top: 10%; left: -25%;" width="150%">
+        </div>
+        <div style="width: 20%; float: left;">
+          <h5>Ingredients</h5>
+          <h5>Cooking Tools</h5>
+          <h5>Cooking Time</h5>
+          <h5>Cooking Difficulty</h5>
+        </div>
+        <div style="width: 40%; float: left;">
+          <input type='text' id='recipeMIngred2' class="recipe-detail" style="margin: 24px 20px 0px; cursor: pointer;" readonly/>
+          <input type='text' id='recipeIngred2' class="recipe-detail" style="margin: -5px 20px 0px; color: var(--color-gray); cursor: pointer;" readonly/>
+          <input type='text' id='recipeTool2' class="recipe-detail" style="margin: 17px 20px; cursor: pointer;" readonly/>
+          <input type='text' id='recipeTime2' class="recipe-detail" style="margin: 22px 20px; cursor: pointer;" readonly/>
+          <input type='text' id='recipeDiff2' class="recipe-detail" style="margin: 15px 20px; cursor: pointer;" readonly/>
+        </div>
+      </div>
+      <div class ="recipe-list" onClick="setName('&2')">
+        <input type='text' id='recipeName3' class='recipe-bar' style="margin-top: -5px; cursor: pointer;" value="" readonly/>
+        <div class="list-photo">
+          <img id='recipeImage3' style="position: relative; top: 10%; left: -25%;" width="150%">
+        </div>
+        <div style="width: 20%; float: left;">
+          <h5>Ingredients</h5>
+          <h5>Cooking Tools</h5>
+          <h5>Cooking Time</h5>
+          <h5>Cooking Difficulty</h5>
+        </div>
+        <div style="width: 40%; float: left;">
+          <input type='text' id='recipeMIngred3' class="recipe-detail" style="width: 100%; margin: 24px 20px 0px; cursor: pointer;" readonly/>
+          <input type='text' id='recipeIngred3' class="recipe-detail" style="margin: -5px 20px 0px; color: var(--color-gray); cursor: pointer;" readonly/>
+          <input type='text' id='recipeTool3' class="recipe-detail" style="margin: 17px 20px; cursor: pointer;" readonly/>
+          <input type='text' id='recipeTime3' class="recipe-detail" style="margin: 22px 20px; cursor: pointer;" readonly/>
+          <input type='text' id='recipeDiff3' class="recipe-detail" style="margin: 15px 20px; cursor: pointer;" readonly/>
+        </div>
       </div>
     </div>
 
