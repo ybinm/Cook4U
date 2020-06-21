@@ -96,11 +96,13 @@
   }
 
   p {
+    margin-top: 30%;
     color: var(--color-gray-disabled);
     text-decoration: none;
-    font-size: var(--font-size-default);
-    font-weight: 800;
-    text-transform: uppercase;
+    text-align: center;
+    font-size: var(--font-size-small);
+    font-weight: 400;
+    font-style: oblique;
     letter-spacing: 1px;
   }
 
