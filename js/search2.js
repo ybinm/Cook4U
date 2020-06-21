@@ -139,6 +139,69 @@ for(var i=0; i<3; i++) {
     }
 } */
 
+function time(id) {
+    document.getElementById(id).className = "is-active";
+    for(var i=5; i>id; i--)
+      document.getElementById(i).className = "";
+    for(var i=1; i<id; i++)
+      document.getElementById(i).className = "is-complete";
+
+    if(id == 2) {
+        document.getElementById('recipe1').style.display = "block";
+        document.getElementById('recipe2').style.display = "none";
+        document.getElementById('recipe3').style.display = "none";
+    }
+    if(id == 3) {
+        document.getElementById('recipe1').style.display = "block";
+        document.getElementById('recipe2').style.display = "block";
+        document.getElementById('recipe3').style.display = "none";
+    }
+    if(id == 4) {
+        document.getElementById('recipe1').style.display = "block";
+        document.getElementById('recipe2').style.display = "block";
+        document.getElementById('recipe3').style.display = "block";
+    }
+    if(id == 5) {
+        document.getElementById('recipe1').style.display = "block";
+        document.getElementById('recipe2').style.display = "block";
+        document.getElementById('recipe3').style.display = "block";
+    }
+}
+  
+function star(id) {
+    document.getElementById(id).className = "is-active";
+    for(var i=10; i>id; i--)
+      document.getElementById(i).className = "";
+    for(var i=6; i<id; i++)
+      document.getElementById(i).className = "is-complete-star";
+
+    if(id == 6) {
+        document.getElementById('recipe1').style.display = "none";
+        document.getElementById('recipe2').style.display = "none";
+        document.getElementById('recipe3').style.display = "none";
+    }
+    if(id == 7) {
+        document.getElementById('recipe1').style.display = "block";
+        document.getElementById('recipe2').style.display = "none";
+        document.getElementById('recipe3').style.display = "none";
+    }
+    if(id == 8) {
+        document.getElementById('recipe1').style.display = "block";
+        document.getElementById('recipe2').style.display = "none";
+        document.getElementById('recipe3').style.display = "none";
+    }
+    if(id == 9) {
+        document.getElementById('recipe1').style.display = "block";
+        document.getElementById('recipe2').style.display = "block";
+        document.getElementById('recipe3').style.display = "block";
+    }
+    if(id == 10) {
+        document.getElementById('recipe1').style.display = "block";
+        document.getElementById('recipe2').style.display = "block";
+        document.getElementById('recipe3').style.display = "block";
+    }
+}
+
 $(document).ready(function() {
     $("#tool3").change(function(){
         if($("#tool3").is(":checked")) {
@@ -152,9 +215,9 @@ $(document).ready(function() {
             }
         }
         else {
-            document.getElementById('recipe3').style.display = "none";
             document.getElementById('recipe1').style.display = "none";
             document.getElementById('recipe2').style.display = "none";
+            document.getElementById('recipe3').style.display = "none";
         }
         if($("#tool1, #tool2, #tool3, #tool4, #tool5, #tool6").is(":checked")) {
         }
@@ -176,9 +239,9 @@ $(document).ready(function() {
             }
         }
         else {
-            document.getElementById('recipe3').style.display = "none";
             document.getElementById('recipe1').style.display = "none";
             document.getElementById('recipe2').style.display = "none";
+            document.getElementById('recipe3').style.display = "none";
         }
         if($("#tool1, #tool2, #tool3, #tool4, #tool5, #tool6").is(":checked")) {
         }
@@ -189,19 +252,3 @@ $(document).ready(function() {
         }
     });
 });
-
-function time(id) {
-    document.getElementById(id).className = "is-active";
-    for(var i=5; i>id; i--)
-      document.getElementById(i).className = "";
-    for(var i=1; i<id; i++)
-      document.getElementById(i).className = "is-complete";
-}
-  
-function star(id) {
-    document.getElementById(id).className = "is-active";
-    for(var i=10; i>id; i--)
-      document.getElementById(i).className = "";
-    for(var i=6; i<id; i++)
-      document.getElementById(i).className = "is-complete-star";
-}
