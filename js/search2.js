@@ -59,67 +59,42 @@ var recipe_info = [
     }
 ]
 
-function setName(name) {
-    window.location.href = "recipe.html?" + name;
-}
-
-(function() {
-    var parameters = (location.href.slice(location.href.indexOf('?') + 1)).split('&');
-    var num = parameters[1];
-    num = parseInt(num);
-
-    document.getElementById('recipeName').value = recipe_info[num].name;
-    document.getElementById('recipeImage0').src = recipe_info[num].pic[0];
-
-    for(var i=0; i<recipe_info[num].main_ingredient.length; i++) {
-        document.getElementById('recipeMIngred').value += recipe_info[num].main_ingredient[i] + "  ";
-    }
-
-    for(var i=0; i<recipe_info[num].ingredient.length; i++) {
-        document.getElementById('recipeIngred').value += recipe_info[num].ingredient[i] + "  ";
-    }
-
-    for(var i=0; i<recipe_info[num].tool.length; i++) {
-        document.getElementById('recipeTool').value += recipe_info[num].tool[i] + "  ";
-    }
-
-    document.getElementById('recipeTime').value = recipe_info[num].time;
-    document.getElementById('recipeDiff').value = recipe_info[num].difficulty;
-
-    for(var i=1; i<5; i++) {
-        document.getElementById('recipeImage'+i).src = recipe_info[num].pic[i];
-    }
-
-    for(var i=0; i<4; i++) {
-        document.getElementById('recipeDescrip'+i).value = recipe_info[num].description[i];
-    }
-
-    var ranNum;
-    ranNum = Math.floor(Math.random()*(num+1));
-
-    document.getElementById('num').innerHTML = "Recommend ♥" + ranNum;
-})()
-
+var parameters = document.getElementById('txt').value.split(',');
+var searchName = [[],[]];
 var count = 0;
 
-function changeHeart(num) {
-    var parameter = num.split('♥');
-    var heartNum = parameter[1];
-    heartNum = parseInt(heartNum);
-
-    var col = "";
-
-    count++;
-
-    if(count%2 == 1) {
-        heartNum += 1;
-        col = "#ff9d21";
+for(var i=0; i<parameters.length; i++) {
+    for(var num=0; num<6; num++) {
+        for(var num2=0; num2<5; num2++) {
+            if(parameters[i] == recipe_info[num].main_ingredient[num2]) {
+                searchName[i][count] = recipe_info[num].name;
+                count++;
+            }
+        }
     }
-    else {
-        heartNum -= 1;
-        col = "#888";
-    }
-
-    document.getElementById('num').innerHTML = "Recommend ♥" + heartNum;
-    document.getElementById('num').style.color = col;
 }
+
+for(var i=0; i<3; i++) {
+    for(var j=0; j<3; j++) {
+        if(searchName[1][i] == searchName[2][j]) {
+            document.getElementById('nameSearchName').value = searchName[1][i];
+        }
+    }
+}
+
+function time(id) {
+    document.getElementById(id).className = "is-active";
+    for(var i=5; i>id; i--)
+      document.getElementById(i).className = "";
+    for(var i=1; i<id; i++)
+      document.getElementById(i).className = "is-complete";
+  }
+  
+  function star(id) {
+    document.getElementById(id).className = "is-active";
+    for(var i=10; i>id; i--)
+      document.getElementById(i).className = "";
+    for(var i=6; i<id; i++)
+      document.getElementById(i).className = "is-complete-star";
+  }
+  
