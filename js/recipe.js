@@ -33,7 +33,8 @@ var recipe_info = [
         ingredient: ["onion", "parsley"],
         tool: ["stove"],
         time: 20,
-        difficulty: "★★" 
+        difficulty: "★★",
+        description: ["Blanch tomatoes and peel them", "Stir-fry garlic in olive oil", "Stir-fry vegetables including tomato", "Add the boiled noodles and basil pesto"]
     }
 ]
 
@@ -66,5 +67,9 @@ function setName(name) {
 
     for(var i=1; i<5; i++) {
         document.getElementById('recipeImage'+i).src = recipe_info[num].pic[i];
+    }
+
+    for(var i=0; i<4; i++) {
+        document.getElementById('recipeDescrip'+i).value = recipe_info[num].description[i];
     }
 })()

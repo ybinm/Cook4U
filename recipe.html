@@ -18,7 +18,7 @@
         <div class="main-photo">
           <img id='recipeImage0' style="position: absolute; top: -60%" width="80%">
         </div>
-        <input type='text' id='recipeName' class='recipe-bar'/>
+        <input type='text' id='recipeName' class='recipe-bar' readonly/>
         <div class="left2">
           <h3>Ingredients</h3>
           <h3>Cooking Tools</h3>
@@ -26,20 +26,31 @@
           <h3>Cooking Difficulty</h3>
         </div>
         <div class="center2">
-          <input type='text' id='recipeMIngred' class="recipe-detail" style="margin: 31px 20px 0px;"/>
-          <input type='text' id='recipeIngred' class="recipe-detail" style="margin: 0px 20px 2px; color: var(--color-gray);"/>
-          <input type='text' id='recipeTool' class="recipe-detail"/>
-          <input type='text' id='recipeTime' class="recipe-detail"/>
-          <input type='text' id='recipeDiff' class="recipe-detail"/>
+          <input type='text' id='recipeMIngred' class="recipe-detail" style="margin: 31px 20px 0px;" readonly/>
+          <input type='text' id='recipeIngred' class="recipe-detail" style="margin: 0px 20px 2px; color: var(--color-gray);" readonly/>
+          <input type='text' id='recipeTool' class="recipe-detail" readonly/>
+          <input type='text' id='recipeTime' class="recipe-detail" readonly/>
+          <input type='text' id='recipeDiff' class="recipe-detail" readonly/>
         </div>
         <input type='text' class='recipe-bar' style="height: 0px; margin: -150px 10% 20px;"/>
         <div class="photo">
           <img id='recipeImage1' width="40%">
-          <img id='recipeImage2' width="40%">
+          <img id='recipeImage2' style="margin-left: 10px;" width="40%">
+          <br>
+          <div class="photo" style="margin: auto 5%;">
+            <div class="col2" style="margin-right: -5%;">
+              <h1 style="display:inline; margin: 0px 0px; line-height: 1; font-size: 2vw; letter-spacing: 0px">1</h1>
+              <textarea id='recipeDescrip0' class="recipe-descrip" readonly></textarea>
+            </div>
+            <div class="col2" style="margin-left: -5%;">
+              <h1 style="display:inline; margin: 0px 0px; line-height: 1; font-size: 2vw; letter-spacing: 0px;">2</h1>
+              <textarea id='recipeDescrip1' class="recipe-descrip" readonly></textarea>
+            </div>
+          </div>
         </div>
         <div class="photo">
           <img id='recipeImage3' width="40%">
-          <img id='recipeImage4' width="40%">
+          <img id='recipeImage4' style="margin-left: 10px;" width="40%">
         </div>
       </div>
       <br>
