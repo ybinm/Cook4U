@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;0,800;1,400;1,800&display=swap');
+
 :root {
     --color-white: #fff;
     --color-black: #333;
@@ -8,7 +10,11 @@
     --font-size-default: .9vw;
     --font-size-small: .8vw;
   }
-  
+
+  input, div, textarea {
+    font-family: 'Open Sans', sans-serif;
+  }
+
   .loading {
     width: 100%; height: 100%;
     position: fixed;
@@ -32,7 +38,7 @@
   }
 
   div.left2 {
-    width: 27%;
+    width: 30%;
     float: left;
   }
 
@@ -42,7 +48,7 @@
   }
 
   div.center2 {
-    width: 73%;
+    width: 70%;
     float: left;
   }
 
@@ -53,12 +59,7 @@
 
   div.col {
     float: left;
-    margin: 10px 15px;
-  }
-
-  div.col2 {
-    width: 70%;
-    float: left;
+    margin: 10px 5px 10px 30px;
   }
 
   div.photo {
@@ -92,7 +93,7 @@
   }
 
   div.recipe-box {
-    width: 80%; height: 1400px;
+    width: 80%; height: 1530px;
     margin: auto;
     border: 2px solid var(--color-gray-disabled);
     border-radius: 30px;
@@ -103,7 +104,7 @@
     color: var(--color-gray-disabled);
     text-decoration: none;
     font-size: var(--font-size-default);
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -112,7 +113,7 @@
     color: var(--color-gray);
     text-decoration: none;
     font-size: var(--font-size-default);
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -126,7 +127,7 @@
     line-height: 4;
     color: var(--color-orange);
     font-size: var(--font-size-default);
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: default;
@@ -137,7 +138,7 @@
     line-height: 4;
     color: var(--color-gray);
     font-size: var(--font-size-default);
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1px;
@@ -149,7 +150,7 @@
     line-height: 4;
     color: var(--color-gray);
     font-size: var(--font-size-default);
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     text-align: right;
     letter-spacing: 1px;
@@ -157,10 +158,11 @@
   }
 
   h4 {
-    margin: -52px 23px 32px;
+    margin: -50px 30px 30px;
     color: var(--color-gray);
     font-size: var(--font-size-small);
-    font-weight: 500;
+    font-weight: 400;
+    font-style: oblique;
     letter-spacing: 1px;
     cursor: default;
   }
@@ -209,7 +211,7 @@
     border-top-width: 0;
     border-bottom-width: 1;
     color: var(--color-orange);
-    font-size: var(--font-size-default);
+    font-size: 1.2vw;
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
@@ -241,24 +243,21 @@
     margin: 22px 20px 23px;
     border: 0px;
     color: var(--color-black);
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
-    outline: none;
     cursor: default;
   }
 
   .recipe-descrip {
-    width: 100%; height: 50px;
-    margin: 0 px;
+    width: 43%; height: 100px;
+    margin-left: 5px;
     border: 0px;
     color: var(--color-black);
     font-size: 1.2vw;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 0px;
-    outline: none;
+    font-weight: 800;
+    font-style: oblique;
     cursor: default;
     resize: none;
   }
@@ -274,7 +273,7 @@
     padding: 8px 10px;
     color: var(--color-gray);
     font-size: var(--font-size-small);
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
@@ -303,7 +302,7 @@
     position: relative;
     color: var(--color-gray);
     font-size: var(--font-size-default);
-    font-weight: 800;
+    font-weight: 700;
     text-align: center;
     border-bottom: 2px solid var(--color-gray-disabled);
   }

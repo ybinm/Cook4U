@@ -73,3 +73,23 @@ function setName(name) {
         document.getElementById('recipeDescrip'+i).value = recipe_info[num].description[i];
     }
 })()
+
+function setHeart(num) {
+    var parameter = num.split('♥');
+    var heartnum = parameter[1];
+    heartnum = parseInt(heartnum);
+
+    var heartcolor = "";
+
+    if(heartnum == 5) {
+        heartnum = 6;
+        heartcolor = "#ff9d21";
+    }
+    else {
+        heartnum = 5;
+        heartcolor = "#888";
+    }
+
+    document.getElementById('num').innerHTML = "Recommend ♥" + heartnum;
+    document.getElementById('num').style.color = heartcolor;
+}

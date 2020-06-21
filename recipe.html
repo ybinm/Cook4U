@@ -16,7 +16,7 @@
       <br>
       <div class="recipe-box">
         <div class="main-photo">
-          <img id='recipeImage0' style="position: absolute; top: -60%" width="80%">
+          <img id='recipeImage0' style="position: absolute; top: -40%" width="80%">
         </div>
         <input type='text' id='recipeName' class='recipe-bar' readonly/>
         <div class="left2">
@@ -34,26 +34,22 @@
         </div>
         <input type='text' class='recipe-bar' style="height: 0px; margin: -150px 10% 20px;"/>
         <div class="photo">
-          <img id='recipeImage1' width="40%">
-          <img id='recipeImage2' style="margin-left: 10px;" width="40%">
-          <br>
-          <div class="photo" style="margin: auto 5%;">
-            <div class="col2" style="margin-right: -5%;">
-              <h1 style="display:inline; margin: 0px 0px; line-height: 1; font-size: 2vw; letter-spacing: 0px">1</h1>
-              <textarea id='recipeDescrip0' class="recipe-descrip" readonly></textarea>
-            </div>
-            <div class="col2" style="margin-left: -5%;">
-              <h1 style="display:inline; margin: 0px 0px; line-height: 1; font-size: 2vw; letter-spacing: 0px;">2</h1>
-              <textarea id='recipeDescrip1' class="recipe-descrip" readonly></textarea>
-            </div>
-          </div>
-        </div>
-        <div class="photo">
-          <img id='recipeImage3' width="40%">
-          <img id='recipeImage4' style="margin-left: 10px;" width="40%">
+          <img id='recipeImage1' style="position: relative; left: 20px; border: 3px solid var(--color-gray-disabled); border-radius: 15px;" width="35%">
+          <h1 style="display: inline; position: relative; left: 30px; bottom: 110px; line-height: 1.5; font-size: 2vw; font-style: oblique;">1</h1>
+          <textarea id='recipeDescrip0' class="recipe-descrip" readonly></textarea>
+          <img id='recipeImage2' style="position: relative; left: 20px; border: 3px solid var(--color-gray-disabled); border-radius: 15px;" width="35%">
+          <h1 style="display: inline; position: relative; left: 30px; bottom: 110px; line-height: 1.5; font-size: 2vw; font-style: oblique;">2</h1>
+          <textarea id='recipeDescrip1' class="recipe-descrip" readonly></textarea>
+          <img id='recipeImage3' style="position: relative; left: 20px; border: 3px solid var(--color-gray-disabled); border-radius: 15px;" width="35%">
+          <h1 style="display: inline; position: relative; left: 30px; bottom: 110px; line-height: 1.5; font-size: 2vw; font-style: oblique;">3</h1>
+          <textarea id='recipeDescrip2' class="recipe-descrip" readonly></textarea>
+          <img id='recipeImage4' style="position: relative; left: 20px; border: 3px solid var(--color-gray-disabled); border-radius: 15px;" width="35%">
+          <h1 style="display: inline; position: relative; left: 30px; bottom: 110px; line-height: 1.5; font-size: 2vw; font-style: oblique;">4</h1>
+          <textarea id='recipeDescrip3' class="recipe-descrip" readonly></textarea>
         </div>
       </div>
-      <br>
+      <a id='num' onClick="setHeart(document.getElementById('num').innerHTML)" style="position: relative; left: 430px; top: 20px; font-size: 1vw;">Recommend ♥5</a>
+      <h3><br></h3>
     </div>
 
     <div class="right">
