@@ -147,24 +147,42 @@ function time(id) {
       document.getElementById(i).className = "is-complete";
 
     if(id == 2) {
-        document.getElementById('recipe1').style.display = "block";
+        if(document.getElementById('7').className == "is-active" || document.getElementById('7').className == "is-complete-star") {
+            document.getElementById('recipe1').style.display = "block";
+        }
         document.getElementById('recipe2').style.display = "none";
         document.getElementById('recipe3').style.display = "none";
     }
     if(id == 3) {
-        document.getElementById('recipe1').style.display = "block";
-        document.getElementById('recipe2').style.display = "block";
+        if(document.getElementById('7').className == "is-active" || document.getElementById('7').className == "is-complete-star") {
+            document.getElementById('recipe1').style.display = "block";
+        }
+        if(document.getElementById('9').className == "is-active" || document.getElementById('9').className == "is-complete-star") {
+            document.getElementById('recipe2').style.display = "block";
+        }
         document.getElementById('recipe3').style.display = "none";
     }
     if(id == 4) {
-        document.getElementById('recipe1').style.display = "block";
-        document.getElementById('recipe2').style.display = "block";
-        document.getElementById('recipe3').style.display = "block";
+        if(document.getElementById('7').className == "is-active" || document.getElementById('7').className == "is-complete-star") {
+            document.getElementById('recipe1').style.display = "block";
+        }
+        if(document.getElementById('9').className == "is-active" || document.getElementById('9').className == "is-complete-star") {
+            document.getElementById('recipe2').style.display = "block";
+        }
+        if(document.getElementById('9').className == "is-active" || document.getElementById('9').className == "is-complete-star") {
+            document.getElementById('recipe3').style.display = "block";
+        }
     }
     if(id == 5) {
-        document.getElementById('recipe1').style.display = "block";
-        document.getElementById('recipe2').style.display = "block";
-        document.getElementById('recipe3').style.display = "block";
+        if(document.getElementById('7').className == "is-active" || document.getElementById('7').className == "is-complete-star") {
+            document.getElementById('recipe1').style.display = "block";
+        }
+        if(document.getElementById('9').className == "is-active" || document.getElementById('9').className == "is-complete-star") {
+            document.getElementById('recipe2').style.display = "block";
+        }
+        if(document.getElementById('9').className == "is-active" || document.getElementById('9').className == "is-complete-star") {
+            document.getElementById('recipe3').style.display = "block";
+        }
     }
 }
   
@@ -181,24 +199,40 @@ function star(id) {
         document.getElementById('recipe3').style.display = "none";
     }
     if(id == 7) {
-        document.getElementById('recipe1').style.display = "block";
+        if(document.getElementById('2').className == "is-active" || document.getElementById('2').className == "is-complete-star") {
+            document.getElementById('recipe1').style.display = "block";
+        }
         document.getElementById('recipe2').style.display = "none";
         document.getElementById('recipe3').style.display = "none";
     }
     if(id == 8) {
-        document.getElementById('recipe1').style.display = "block";
+        if(document.getElementById('2').className == "is-active" || document.getElementById('2').className == "is-complete-star") {
+            document.getElementById('recipe1').style.display = "block";
+        }
         document.getElementById('recipe2').style.display = "none";
         document.getElementById('recipe3').style.display = "none";
     }
     if(id == 9) {
-        document.getElementById('recipe1').style.display = "block";
-        document.getElementById('recipe2').style.display = "block";
-        document.getElementById('recipe3').style.display = "block";
+        if(document.getElementById('2').className == "is-active" || document.getElementById('2').className == "is-complete-star") {
+            document.getElementById('recipe1').style.display = "block";
+        }
+        if(document.getElementById('3').className == "is-active" || document.getElementById('3').className == "is-complete-star") {
+            document.getElementById('recipe2').style.display = "block";
+        }
+        if(document.getElementById('4').className == "is-active" || document.getElementById('4').className == "is-complete-star") {
+            document.getElementById('recipe3').style.display = "block";
+        }
     }
     if(id == 10) {
-        document.getElementById('recipe1').style.display = "block";
-        document.getElementById('recipe2').style.display = "block";
-        document.getElementById('recipe3').style.display = "block";
+        if(document.getElementById('2').className == "is-active" || document.getElementById('2').className == "is-complete-star") {
+            document.getElementById('recipe1').style.display = "block";
+        }
+        if(document.getElementById('3').className == "is-active" || document.getElementById('3').className == "is-complete-star") {
+            document.getElementById('recipe2').style.display = "block";
+        }
+        if(document.getElementById('4').className == "is-active" || document.getElementById('4').className == "is-complete-star") {
+            document.getElementById('recipe3').style.display = "block";
+        }
     }
 }
 
