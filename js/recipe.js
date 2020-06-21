@@ -6,12 +6,13 @@ var recipe_info = [
         ingredient: ["leek", "salt"],
         tool: ["stove"],
         time: 20,
-        difficulty: "★★"
+        difficulty: "★★",
+        description: ["Grind the potatoes after peeling off", "Sift the grind potatoes for 5 minutes", "Mix the powder with eggs, potatoes and shrimp", "Pour oil on the pan and start frying"]
     },
     {
         name: "Shrimp Potato Ball",
         pic: ["images/spb0.jpg", "images/spb1.jpg", "images/spb2.jpg", "images/spb3.jpg", "images/spb4.jpg"],
-        main_ingredient: ["shrimp", "potato", "Flour", "oil"],
+        main_ingredient: ["shrimp", "potato", "flour", "oil"],
         ingredient: ["cheese", "salt"],
         tool: ["stove"],
         time: 40,
@@ -20,7 +21,7 @@ var recipe_info = [
     {
         name: "Potato Shrimp Pizza",
         pic: ["images/psp0.jpg", "images/psp1.jpg", "images/psp2.jpg", "images/psp3.jpg", "images/psp4.jpg"],
-        main_ingredient: ["shrimp", "potato", "Flour", "cheese", "tomato"],
+        main_ingredient: ["shrimp", "potato", "flour", "cheese", "tomato"],
         ingredient: ["olive"],
         tool: ["oven"],
         time: 60,
@@ -35,6 +36,26 @@ var recipe_info = [
         time: 20,
         difficulty: "★★",
         description: ["Blanch tomatoes and peel them", "Stir-fry garlic in olive oil", "Stir-fry vegetables including tomato", "Add the boiled noodles and basil pesto"]
+    },
+    {
+        name: "no manu",
+        pic: ["images/nc0.jpg", "images/nc1.jpg", "images/nc2.jpg", "images/nc3.jpg", "images/nc4.jpg"],
+        main_ingredient: ["", "", "", "", ""],
+        ingredient: ["salt"],
+        tool: [""],
+        time: 20,
+        difficulty: "★★",
+        description: ["", "", "", ""]
+    },
+    {
+        name: "Nutty Cookie",
+        pic: ["images/nc0.jpg", "images/nc1.jpg", "images/nc2.jpg", "images/nc3.jpg", "images/nc4.jpg"],
+        main_ingredient: ["nut", "flour", "", "", ""],
+        ingredient: ["salt"],
+        tool: ["oven"],
+        time: 90,
+        difficulty: "★★★★★",
+        description: ["", "", "", ""]
     }
 ]
 
@@ -72,24 +93,33 @@ function setName(name) {
     for(var i=0; i<4; i++) {
         document.getElementById('recipeDescrip'+i).value = recipe_info[num].description[i];
     }
+
+    var ranNum;
+    ranNum = Math.floor(Math.random()*(num+1));
+
+    document.getElementById('num').innerHTML = "Recommend ♥" + ranNum;
 })()
 
-function setHeart(num) {
+var count = 0;
+
+function changeHeart(num) {
     var parameter = num.split('♥');
-    var heartnum = parameter[1];
-    heartnum = parseInt(heartnum);
+    var heartNum = parameter[1];
+    heartNum = parseInt(heartNum);
 
-    var heartcolor = "";
+    var col = "";
 
-    if(heartnum == 5) {
-        heartnum = 6;
-        heartcolor = "#ff9d21";
+    count++;
+
+    if(count%2 == 1) {
+        heartNum += 1;
+        col = "#ff9d21";
     }
     else {
-        heartnum = 5;
-        heartcolor = "#888";
+        heartNum -= 1;
+        col = "#888";
     }
 
-    document.getElementById('num').innerHTML = "Recommend ♥" + heartnum;
-    document.getElementById('num').style.color = heartcolor;
+    document.getElementById('num').innerHTML = "Recommend ♥" + heartNum;
+    document.getElementById('num').style.color = col;
 }
