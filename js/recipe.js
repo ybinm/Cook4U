@@ -1,3 +1,7 @@
+$(window).load(function() {
+    $(".loading").fadeOut();
+  });
+
 var recipe_info = [
     {
         name: "Shrimp Potato Pancake",

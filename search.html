@@ -34,12 +34,12 @@
         <div class="col" style="margin-left: 15px;">
           <input type='text' id='txt' class='text-bar'/>
           <ul class="tools">
-            <li><input type="checkbox" id="tool1"><label for="tool1">Air Fryer</label></li>
-            <li><input type="checkbox" id="tool2"><label for="tool2">Oven</label></li>
-            <li><input type="checkbox" id="tool3"><label for="tool3">Stove</label></li>
-            <li><input type="checkbox" id="tool4"><label for="tool4">Steamer</label></li>
-            <li><input type="checkbox" id="tool5"><label for="tool5">Blender</label></li>
-            <li><input type="checkbox" id="tool6"><label for="tool6">Hand Mixer</label></li>
+            <li><input type="checkbox" id='tool1'><label for="tool1">Air Fryer</label></li>
+            <li><input type="checkbox" id='tool2'><label for="tool2">Oven</label></li>
+            <li><input type="checkbox" id='tool3'><label for="tool3">Stove</label></li>
+            <li><input type="checkbox" id='tool4'><label for="tool4">Steamer</label></li>
+            <li><input type="checkbox" id='tool5'><label for="tool5">Blender</label></li>
+            <li><input type="checkbox" id='tool6'><label for="tool6">Hand Mixer</label></li>
           </ul>
           <ol class="progress-bar">
             <li id=1><span>0</span></li>
@@ -57,7 +57,7 @@
           </ol>
         </div>
       </div>
-      <div class ="recipe-list" onClick="setName('&0')">
+      <div id="recipe1" class="recipe-list" onClick="setName('&0')">
         <input type='text' id='recipeName1' class='recipe-bar' style="margin-top: -5px; cursor: pointer;" value="" readonly/>
         <div class="list-photo">
           <img id='recipeImage1' style="position: relative; top: 10%; left: -25%;" width="150%">
@@ -76,7 +76,7 @@
           <input type='text' id='recipeDiff1' class="recipe-detail" style="margin: 15px 20px; cursor: pointer;" readonly/>
         </div>
       </div>
-      <div class ="recipe-list" onClick="setName('&1')">
+      <div id="recipe2" class="recipe-list" onClick="setName('&1')">
         <input type='text' id='recipeName2' class='recipe-bar' style="margin-top: -5px; cursor: pointer;" value="" readonly/>
         <div class="list-photo">
           <img id='recipeImage2' style="position: relative; top: 10%; left: -25%;" width="150%">
@@ -95,7 +95,7 @@
           <input type='text' id='recipeDiff2' class="recipe-detail" style="margin: 15px 20px; cursor: pointer;" readonly/>
         </div>
       </div>
-      <div class ="recipe-list" onClick="setName('&2')">
+      <div id="recipe3" class="recipe-list" onClick="setName('&2')">
         <input type='text' id='recipeName3' class='recipe-bar' style="margin-top: -5px; cursor: pointer;" value="" readonly/>
         <div class="list-photo">
           <img id='recipeImage3' style="position: relative; top: 10%; left: -25%;" width="150%">
@@ -114,6 +114,7 @@
           <input type='text' id='recipeDiff3' class="recipe-detail" style="margin: 15px 20px; cursor: pointer;" readonly/>
         </div>
       </div>
+      <h3><br></h3>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
